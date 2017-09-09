@@ -3,10 +3,10 @@ A lightweight node app that will search for mcm card prices.
 
 ### To start the service, you need to add four environmental variables from your MKM-profile.
 The variable names should be descriptive enough for anyone who uses Magic Card Market.
-APP_TOKEN
-APP_SECRET
-ACCESS_TOKEN
-ACCESS_SECRET
+- APP_TOKEN
+- APP_SECRET
+- ACCESS_TOKEN
+- ACCESS_SECRET
 
 ### Finding information on a card
 Call the service, for example
