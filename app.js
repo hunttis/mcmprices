@@ -13,7 +13,7 @@ app.get('/', function(req, res, next) {
 });
 
 function mapCardnameToInterface(cardname) {
-  return cardname.replace('[\'-+.^:,]', '').replace(' ', '_').toLowerCase()
+  return cardname.replace('[\'-+.^:,]', '').replace(new RegExp(' ', 'g'), '_').toLowerCase();
 }
 
 app.get('/products/:cardname', function(req, res, next) {
