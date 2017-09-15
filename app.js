@@ -13,13 +13,13 @@ app.get('/', function(req, res, next) {
 });
 
 function mapCardnameToInterface(cardname) {
-  return cardname.replace('[\'-+.^:,]', '').replace(new RegExp(' ', 'g'), '_').toLowerCase();
+  return .replace(new RegExp('[\'-+.^:,]', 'g'), '').replace(new RegExp(' ', 'g'), '_').toLowerCase();
 }
 
 app.get('/products/:cardname', function(req, res, next) {
   console.log('Trying to find', req.params.cardname);
   Client.get('/ws/v1.1/output.json/products/' + mapCardnameToInterface(req.params.cardname) + '/1/1/false').then(res=> {
-    console.log('Found it!');
+    console.log('Found it!', res.headers);
     return res.response;
   }).then( response => {
     res.send(response);
