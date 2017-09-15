@@ -12,9 +12,13 @@ app.get('/', function(req, res, next) {
   res.sendStatus(200);
 });
 
+function mapCardnameToInterface(cardname) {
+  return cardname.replace('[\'-+.^:,]', '').replace(' ', '_').toLowerCase()
+}
+
 app.get('/products/:cardname', function(req, res, next) {
   console.log('Trying to find', req.params.cardname);
-  Client.get('/ws/v1.1/output.json/products/' + req.params.cardname + '/1/1/false').then(res=> {
+  Client.get('/ws/v1.1/output.json/products/' + mapCardnameToInterface(req.params.cardname) + '/1/1/false').then(res=> {
     console.log('Found it!');
     return res.response;
   }).then( response => {
@@ -23,7 +27,6 @@ app.get('/products/:cardname', function(req, res, next) {
     console.log('Error occured :( ', e);
     res.sendStatus(500);
   });
-
 });
 
 app.use(function(req, res, next) {
