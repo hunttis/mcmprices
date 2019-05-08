@@ -10,9 +10,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "~4.15.2",
-    "mkm-api": "^2.0.0",
-    "cfenv": "^1.0.x"
+    "cfenv": "^1.2.2",
+    "express": "^4.16.4",
+    "mkm-api": "^2.0.0"
   },
   "author": "Ville 'Hunttis' Nuutinen",
   "license": "MIT"
