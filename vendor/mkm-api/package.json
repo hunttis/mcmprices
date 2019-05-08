@@ -1,0 +1,23 @@
+{
+  "author": "",
+  "dependencies": {
+    "fishingrod": "^3.7.0",
+    "oauth-percent-encode": "^0.1.2",
+    "utf8": "^2.1.2"
+  },
+  "description": "This is a simple node JS client for MKM API.",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": "ISC",
+  "main": "mkm.js",
+  "name": "mkm-api",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "version": "2.0.0"
+}

@@ -12,7 +12,9 @@
   "dependencies": {
     "cfenv": "^1.2.2",
     "express": "^4.16.4",
-    "mkm-api": "^2.0.0"
+    "fishingrod": "^3.7.0",
+    "oauth-percent-encode": "^0.1.2",
+    "utf8": "^2.1.2"
   },
   "author": "Ville 'Hunttis' Nuutinen",
   "license": "MIT"
