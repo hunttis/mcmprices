@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
-const MkmApiClient = require('mkm-api');
+const MkmApiClient = require('./vendor/mkm-api');
 const Client = new MkmApiClient(process.env.APP_TOKEN, process.env.APP_SECRET);
 Client.setAccessTokens(process.env.ACCESS_TOKEN, process.env.ACCESS_SECRET);
 
